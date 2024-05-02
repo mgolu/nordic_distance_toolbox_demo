@@ -107,6 +107,12 @@ int main(void)
 	}
 	LOG_INF("Advertising initialized\n");
 
+	err = scan_start();
+	if (err) {
+		LOG_ERR("Scanning failed to start (err %d)\n", err);
+	}
+	LOG_INF("Scanning initialized\n");
+
 	err = dm_init(&init_param);
 	if (err) {
 		LOG_ERR("Distance measurement failed to start (err %d)\n", err);

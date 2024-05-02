@@ -2,5 +2,6 @@
 #define ADVERTISE_H__
 
 int advertise_init(void);
+int scan_start(void);
 
 #endif
